@@ -1,0 +1,47 @@
+body, html {
+    background-image: url("../resources/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.inputClass {
+    display: block;
+    margin: auto;
+    font-style: italic;
+    padding-left: 2%;
+    width: 90%;
+    height: 3em;
+
+}
+
+.page-wrapper {
+    margin: 20%;
+    border: 1px solid;
+    height: 40%;
+    width: 50%;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    background-image: linear-gradient( #c5d1fb, #476dec, #c5d1fb);
+    color: white;
+    width: 90%;
+    height: 4em;
+}
+
+.login-form-holder {
+    height: 9em;
+}
+
+span {
+    margin: auto;
+    font-size: 3em;
+    font-family: "Verdana";
+    font-weight: bold;
+    color: white;
+}
