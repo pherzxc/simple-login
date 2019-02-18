@@ -4,10 +4,12 @@ var loginWidget = function() {
         header: null,
         username: null,
         password: null,
+        forgot: null,
+        register: null,
         login: null
     };
 
-    initialize();
+    global.wrapper = initialize();
 
     function initialize() {
         var user;
@@ -15,26 +17,47 @@ var loginWidget = function() {
 
         var wrapper = document.createElement('div');
         $(wrapper).addClass('page-wrapper');
-        global.wrapper = wrapper;
+
+        var wallpaperWrapper = document.createElement('div');
+        $(wallpaperWrapper).addClass('wallpaper-wrapper');
+
+        var wallpaperTitle = generateWallpaperTitle();
+
+        var formWrapper = document.createElement('div');
+        $(formWrapper).addClass('form-wrapper');
 
         var header = generateLoginHeader();
         global.header = header;
 
-        var username = generateField(user, LOGIN_ID.USER, LOGIN_LABEL.USER);
+        var username = generateField(user, LOGIN_ID.USER, LOGIN_FORM_TEXT.USER);
         global.username = username;
         
-        var password = generateField(pass, LOGIN_ID.PASS, LOGIN_LABEL.PASS);
+        var password = generateField(pass, LOGIN_ID.PASS, LOGIN_FORM_TEXT.PASS);
         global.password = password;
     
         var loginButton = document.createElement('button');
         global.login = loginButton;
         $(loginButton).addClass('button');
-        $(loginButton).text(LOGIN_LABEL.BUTTON);
+        $(loginButton).text(LOGIN_FORM_TEXT.BUTTON);
 
-        $(wrapper).append(header);
-        $(wrapper).append(username);
-        $(wrapper).append(password);
-        $(wrapper).append(loginButton);
+        var forgot = generateForgotPassword();
+        global.forgot = forgot;
+
+        var register = generateRegister();
+        global.register = register;
+
+        var signup = $('#sign-up-label');
+        global.signup = signup;
+
+        $(formWrapper).append(header);
+        $(formWrapper).append(username);
+        $(formWrapper).append(password);
+        $(formWrapper).append(loginButton);
+        $(formWrapper).append(forgot);
+        $(formWrapper).append(register);
+        $(wallpaperWrapper).append(wallpaperTitle);
+        $(wrapper).append(wallpaperWrapper);
+        $(wrapper).append(formWrapper)
 
         return wrapper;
     }
@@ -53,6 +76,10 @@ var loginWidget = function() {
 
     loginWidget.prototype.getLoginButton = function() {
         return global.login;
+    }
+
+    loginWidget.prototype.getForgetPassBtn = function() {
+        return global.getForgetPassBtn;
     }
 
 }
