@@ -33,12 +33,11 @@ var loginWidget = function() {
         global.username = username;
         
         var password = generateField(pass, LOGIN_ID.PASS, LOGIN_FORM_TEXT.PASS);
+        $(password).attr('type', 'password');
         global.password = password;
     
-        var loginButton = document.createElement('button');
-        global.login = loginButton;
-        $(loginButton).addClass('button');
-        $(loginButton).text(LOGIN_FORM_TEXT.BUTTON);
+        var loginButton = generateLoginButton()
+        global.login = loginButton;  
 
         var forgot = generateForgotPassword();
         global.forgot = forgot;
@@ -78,8 +77,12 @@ var loginWidget = function() {
         return global.login;
     }
 
-    loginWidget.prototype.getForgetPassBtn = function() {
-        return global.getForgetPassBtn;
+    loginWidget.prototype.getForgetButton = function() {
+        return global.forgot;
+    }
+
+    loginWidget.prototype.getSignUpButton = function() {
+        return global.register;
     }
 
 }
