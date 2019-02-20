@@ -1,10 +1,11 @@
 var loginWidget;
+var root = '#root';
 var data = {};
 
 
 function initializeApp() {
     loginWidget = $.extend(true, {}, new loginWidget());
-    $("#root").append(loginWidget.getWidget());
+    $(root).append(loginWidget.getWidget());
 
     loginControls();
 }

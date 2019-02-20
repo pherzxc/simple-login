@@ -21,6 +21,11 @@ WALLPAPER_TEXT = {
     'TITLE_2' : 'Concierge'
 }
 
+LOGIN_CLASS_LABEL = {
+    'INPUT' : 'input-field',
+    'BUTTON' : 'sign-in-button'
+}
+
 
 
 
