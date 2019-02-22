@@ -10,6 +10,12 @@ function initializeApp() {
     loginControls();
 }
 
+function setLoginHandlers() {
+    $(loginWidget.getForgetButton()).on("click tap", function() {
+       login(data);
+    });
+}
+
 function loginControls() {
     $(loginWidget.getLoginButton()).on("click tap", function() {
         data["username"] = loginWidget.getUsername();

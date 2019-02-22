@@ -5,6 +5,41 @@ LOGIN_ID = {
     'PASS_LOGO' : "resources/images/password.png"
 }
 
+LOGIN_LEFT = {
+    "header": "SVI",
+    "description": "",
+    "icon": ""
+}
+
+fields = [{
+    "type": "text",
+    "label": "name",
+    "key": "name",
+    "style": "style"
+}, {
+    "type": "text",
+    "label": "name",
+    "key": "name",
+    "style": "style"
+}, {
+    "type": "text",
+    "label": "name",
+    "key": "name",
+    "style": "style"
+}, {
+    "type": "text",
+    "label": "name",
+    "key": "name",
+    "style": "style"
+}]
+
+LOGIN_RIGHT = {
+    "header": "Login",
+    "fields": {
+        "username": "Username",
+        "password": "Password"
+    }
+}
 LOGIN_FORM_TEXT = {
     'USER' : 'Username',
     'PASS' : 'Password',
